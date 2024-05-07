@@ -1,3 +1,5 @@
+// change layoute to template if you dont wanna preserve the component state and html elements
+
 export const metadata = {
   title: {
 

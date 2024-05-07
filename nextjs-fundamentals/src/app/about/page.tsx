@@ -3,7 +3,9 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 
-
+const generateRandom = (number : number) => {
+    return Math.floor(Math.random() * number);
+}
 
 export default function About() {
 
@@ -14,6 +16,12 @@ export default function About() {
     ]
 
     const pathName = usePathname();
+
+    const randomNum = generateRandom(2);
+
+    if(randomNum === 1) {
+        throw new Error('Error from About page')
+    }
 
     return <>
     <h1>About page</h1>
